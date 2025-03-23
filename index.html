@@ -71,11 +71,79 @@
         <div class="p-4 p-md-5 bg-light border rounded-3">
           <h1 class="display-5 mb-3">Кузбасс Банк</h1>
           <p class="lead mb-4">Ваш надежный финансовый партнер</p>
-          <a href="registration.html" class="btn btn-primary btn-lg px-4 py-2"
-            >Оформить кредит</a
+          <button
+            type="button"
+            class="btn btn-primary btn-lg px-4 py-2"
+            data-bs-toggle="modal"
+            data-bs-target="#creditModal"
           >
+            Оформить кредит
+          </button>
         </div>
       </section>
+
+      <!-- Само модальное окно -->
+      <div class="modal fade" id="creditModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Заявка на кредит</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+
+            <div class="modal-body">
+              <form id="creditForm">
+                <div class="mb-3">
+                  <label class="form-label">Фамилия</label>
+                  <input type="text" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Имя</label>
+                  <input type="text" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Отчество</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Номер телефона</label>
+                  <input type="tel" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Желаемая сумма</label>
+                  <input type="number" class="form-control" required />
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+              <button type="submit" form="creditForm" class="btn btn-primary">
+                Отправить заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section id="discounts" class="container-xxl mb-4 mb-lg-5">
         <h2 class="mb-3 mb-lg-4">Акции банка</h2>
